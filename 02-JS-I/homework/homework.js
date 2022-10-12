@@ -235,14 +235,12 @@ function esVocal(letra) {
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí 33
-  if (["a", "e", "i", "o", "u"].includes(letra.toLowerCase())) {
-    return ('Es vocal')
-  } else if (letra.length > 1) {
-    return ('Dato incorrecto');
-  } else {
-    return ('Dato incorrecto');
-  }
+  const vocales = ['a', 'e', 'i', 'o', 'u'];
+  const letraMinuscula = letra.toLowerCase();
 
+  const response = vocales.includes(letraMinuscula) ?  'Es vocal' : 'Dato incorrecto'
+  return response
+  
 }
 
 
